@@ -38,7 +38,7 @@
 <%= shell_config("HADOOP_CLASSPATH") %>
 
 # The maximum amount of heap to use, in MB. Default is 1000.
-export HADOOP_HEAPSIZE=2048
+export HADOOP_HEAPSIZE=3048
 
 # Extra Java runtime options.  Empty by default.
 <%= shell_config("HADOOP_OPTS") %>
