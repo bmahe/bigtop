@@ -147,6 +147,11 @@
     <value>4096</value>
   </property>
 
+ <property>
+    <name>dfs.support.append</name>
+    <value>true</value>
+  </property>
+
   <!-- Configurations for large cluster -->
 <% if has_variable?("hadoop_config_dfs_block_size") %>
   <property>
