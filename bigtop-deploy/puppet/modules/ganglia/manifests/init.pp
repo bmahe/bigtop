@@ -30,7 +30,7 @@ class ganglia::gmetad {
 
   file {
     "/etc/gmetad.conf":
-        source => "file://puppet/ganglia/gmetad.conf",
+        source => "puppet:///ganglia/gmetad.conf",
   }
 
   service { "gmetad":
