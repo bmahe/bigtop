@@ -61,6 +61,12 @@ class hadoop {
     }
 
     file {
+      "/etc/hadoop/conf/hadoop-metrics.properties":
+        content => template('hadoop/hadoop-metrics.properties'),
+        require => [Package["hadoop"]],
+    }
+
+    file {
       "/etc/default/hadoop":
         content => template('hadoop/hadoop'),
         require => [Package["hadoop"]],
@@ -101,7 +107,7 @@ class hadoop {
     service { "hadoop-datanode":
       ensure => running,
       hasstatus => true,
-      subscribe => [Package["hadoop-datanode"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/hdfs-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"]],
+      subscribe => [Package["hadoop-datanode"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/hdfs-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"], File["/etc/hadoop/conf/hadoop-metrics.properties"]],
       require => [ Package["hadoop-datanode"], File[$dirs] ],
     }
     Kerberos::Host_keytab <| title == "hdfs" |> -> Service["hadoop-datanode"]
@@ -161,7 +167,7 @@ class hadoop {
     service { "hadoop-namenode":
       ensure => running,
       hasstatus => true,
-      subscribe => [Package["hadoop-namenode"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"]],
+      subscribe => [Package["hadoop-namenode"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"], File["/etc/hadoop/conf/hadoop-metrics.properties"]],
       require => [Package["hadoop-namenode"], Exec["namenode format"]],
     } 
     Kerberos::Host_keytab <| title == "hdfs" |> -> Service["hadoop-namenode"]
@@ -202,7 +208,7 @@ class hadoop {
     service { "hadoop-jobtracker":
       ensure => running,
       hasstatus => true,
-      subscribe => [Package["hadoop-jobtracker"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/mapred-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"]],
+      subscribe => [Package["hadoop-jobtracker"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/mapred-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"], File["/etc/hadoop/conf/hadoop-metrics.properties"]],
       require => [ Package["hadoop-jobtracker"], File[$dirs] ],
     }
    
@@ -239,7 +245,7 @@ class hadoop {
     service { "hadoop-tasktracker":
       ensure => running,
       hasstatus => true,
-      subscribe => [Package["hadoop-tasktracker"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/mapred-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"]],
+      subscribe => [Package["hadoop-tasktracker"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/mapred-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"], File["/etc/hadoop/conf/hadoop-metrics.properties"]],
       require => [ Package["hadoop-tasktracker"], File["/etc/hadoop/conf/taskcontroller.cfg"], File[$dirs] ],
     }
  
@@ -268,7 +274,7 @@ class hadoop {
     service { "hadoop-secondarynamenode":
       ensure => running,
       hasstatus => true,
-      subscribe => [Package["hadoop-secondarynamenode"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"]],
+      subscribe => [Package["hadoop-secondarynamenode"], File["/etc/hadoop/conf/core-site.xml"], File["/etc/hadoop/conf/hadoop-env.sh"], File["/etc/hadoop/conf/hadoop-metrics.properties"]],
       require => [Package["hadoop-secondarynamenode"]],
     }
     Kerberos::Host_keytab <| title == "hdfs" |> -> Service["hadoop-secondarynamenode"]
