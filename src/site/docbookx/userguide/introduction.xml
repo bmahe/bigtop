@@ -22,6 +22,18 @@
         */
     -->
     <title>Introduction</title>
+    
+    <para>Apache Bigtop acts as an integration point and therefore can help you in many areas</para>
+    
+    <section>
+        <title>What is in Apache Bigtop?</title>
 
-
+    </section>
+    
+    
+    <section>
+        <title>Typical usage of Apache Bigtop</title>
+    </section>
+    
+    
 </chapter>

@@ -21,9 +21,154 @@
         * limitations under the License.
         */
     -->
-    <title>
-        What is new in Apache Bigtop <?eval ${project.version}?>
-    </title>
+    <title>What is new in Apache Bigtop </title>
+
+    <section xml:id="what-s-new-apache-bigtop-latest">
+        <title>
+            Apache Bigtop <?eval ${project.version}?>
+        </title>
+
+        <itemizedlist mark='bullet'>
+            <listitem>
+                <para>Support for RHEL 7</para>
+            </listitem>
+            <listitem>
+                <para>New project Kite</para>
+            </listitem>
+        </itemizedlist>
+    </section>
 
 
+    <section xml:id="what-s-new-apache-bigtop-0.7.0">
+        <title>Apache Bigtop 0.7.0</title>
+
+        <section>
+            <title>New Features</title>
+            <itemizedlist mark='bullet'>
+                <listitem>
+                    <para>
+                        Addition of
+                        <link xlink:href="http://phoenix-hbase.blogspot.com/">Phoenix</link>
+                        , the Apache HBase SQL layer project
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Addition of
+                        <link xlink:href="http://spark.incubator.apache.org/">Apache Spark (incubating)</link>
+                        , the general-purpose cluster computing system
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        A brand new SolrCloud 4.5 integration with HDFS
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Improvement to our puppet recipes so setting up your Apache Bigtop toolchain will be easier
+                        than ever
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Addition of a new script init-hdfs.sh to initialize Apache HDFS filesystem structure so you
+                        can get up and running without
+                        manually setting up a complex directory structure
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Add flexibility in the way Apache Oozie manages its Apache Tomcat application
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Add a new standard location to install SQL connectors and other plug-ins
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+
+
+        <section>
+            <title>Bug Fixes</title>
+            <itemizedlist mark='bullet'>
+                <listitem>
+                    <para>
+                        Libsnappy is now included in
+                        <link xlink:href="http://hadoop.apache.org/">Apache Hadoop</link>
+                        packages
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Clean up some dependencies throughout our packages
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Update to our documentation
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+
+
+        <section>
+            <title>Packages Upgrades</title>
+            <itemizedlist mark='bullet'>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://hadoop.apache.org/">Apache Hadoop 2.0.6-alpha</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://giraph.apache.org/">Apache Giraph 1.0.0</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://flume.apache.org/">Apache Flume 1.4.0</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://data.linkedin.com/opensource/datafu">Apache Pig datafu 1.0.0</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://crunch.apache.org/">Apache Crunch 0.7.0</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://hbase.apache.org/">Apache HBbase 0.94.12</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://hive.apache.org/">Apache Hive 0.11.0</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://gethue.com/">Hue 2.5.1</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://mahout.apache.org/">Apache Mahout 0.7.5</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://lucene.apache.org/solr/">Apache Solr 4.5.0</link>
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
 </chapter>

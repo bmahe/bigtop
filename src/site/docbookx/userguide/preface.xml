@@ -24,5 +24,44 @@
     <title>Preface</title>
 
     <para>
+        The primary goal of Apache Bigtop is to build a community around the packaging and interoperability testing of
+        Hadoop-related projects. This includes testing at various levels (packaging, platform, runtime, upgrade,
+        etc...)
+        developed by a community with a focus on the system as a whole, rather than individual projects.
     </para>
+
+    <section>
+        <title>Who should read this guide?</title>
+
+        <para>
+            If you are reading this guide, you are obviously interested in
+            <link xlink:href="http://hadoop.apache.org/">
+                <trademark class='trade'>Apache Hadoop</trademark>
+            </link>
+            and distributed systems.
+        </para>
+        <para>
+            This guide will be useful if you want to deploy your own cluster whether it is on virtual machines
+            in a
+            cloud or on real hardware in a datacenter or bedroom.
+        </para>
+        <para>
+            No specific knowledge will be assumed and every topic will be introduced.
+            However be mindful that distributed
+            systems, and in particular
+            <link xlink:href="http://hadoop.apache.org/">
+                <trademark class='trade'>Apache Hadoop</trademark>
+            </link>
+            ,
+            are complex systems. While exciting and innovative, they can also be a great source of
+            frustration. The goal
+            of this user guide is to prevent frustrations and to keep that experience rewarding.
+        </para>
+    </section>
+
+    <section>
+        <title>What is in this guide?</title>
+
+    </section>
+
 </preface>
